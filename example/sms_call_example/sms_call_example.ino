@@ -16,8 +16,6 @@ void sim_at_wait()
     while (simSerial.available()) {
         Serial.write(simSerial.read());
     }
-
-    Serial.write("Done\n");
 }
 
 bool sim_at_cmd(String cmd){
@@ -88,7 +86,6 @@ void setup()
     pinMode(2,OUTPUT); 
     digitalWrite(2,HIGH);
 
-  delay(5000);   
     sent_sms();
 
     // Delay 5s
